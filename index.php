@@ -7,7 +7,7 @@ $MR_id = $data["object_attributes"]["iid"];
 $ch = curl_init("https://gitlab.com/api/v4/projects/{$project_id}/merge_requests/{$MR_id}/commits");
 $fp = fopen("output.txt", "w");
 curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array("PRIVATE-TOKEN: glpat-PDfRBvD5zzCgmWQ2cehD"));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array("PRIVATE-TOKEN: <your token>"));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 if(curl_error($ch)) {
